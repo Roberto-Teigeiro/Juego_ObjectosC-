@@ -14,6 +14,7 @@ virtual void actua(personaje& personaje);
 virtual void recibe_interaccion(int puntos);
 virtual void getDialogo();
 void barravida(double salud);
+bool operator==(personaje& personaje);
 protected:
 std::string nombre;
 std::string descripcion;

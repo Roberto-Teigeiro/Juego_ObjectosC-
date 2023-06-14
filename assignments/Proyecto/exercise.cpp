@@ -20,6 +20,7 @@ int main()
   int contrincante=1;
   int seleccion = 0;
   personajes[0]->recibe_interaccion(-90);
+  system("clear");
    cout<<"Eres un guerrero magico derrotado en el frente, te encuentras durante la guerra de magos en el ano 1300, estas herido y perdido, deberas encontrar la salida de este camino, pero ten cuidado, hay enemigos que te atacaran, y si tu salud llega a 0, perderas."<<endl;
    cout<<"decide que deseas hacer: "<<endl;
    cout<<"Iniciar el juego: 1\t"<<"Salir del juego: 2"<<endl;
@@ -29,7 +30,7 @@ int main()
     cout<<"Estas mal herido!";
     personajes[0]->barravida(personajes[0]->getsalud());
             while (seleccion!=3) {
-              if ((personajes[contrincante]->gettipo()=="amistoso")){
+              if ((personajes[contrincante]==personajes[1])){
                 cout<<"Este personaje no parece malo... Pero esta dormido!, presiona 1 para despertarlo"<<endl;
                 cin>>seleccion;
                 if(seleccion==1){

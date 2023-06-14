@@ -40,6 +40,14 @@ void personaje::barravida(double salud){
     std::cout << std::endl;
 
 }
+bool personaje::operator==(personaje& Personaje){
+    if ("amistoso"==Personaje.gettipo()){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
 void personaje::actua(personaje& personaje){}
 void personaje::recibe_interaccion(int puntos){}
 void personaje::getDialogo(){}
