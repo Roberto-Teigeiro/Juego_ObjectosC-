@@ -12,8 +12,9 @@ void jugador::recibe_interaccion(int puntos){
 }
 
 void jugador::actua(personaje& personaje){
-    int ataque = rand() % 40;
-    personaje.recibe_interaccion(-ataque);
+    int ataque = rand() % maxataque+1;
+    if (personaje.getsalud() > 0.00){
+    personaje.recibe_interaccion(-ataque);}
 }
 
 bool jugador::estavivo(){

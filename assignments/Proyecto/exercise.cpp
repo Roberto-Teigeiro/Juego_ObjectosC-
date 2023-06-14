@@ -15,8 +15,8 @@ int main()
   personajes.push_back(new amistoso("Amistoso", "El amistoso es un personaje que no ataca, pero puede interactuar con el jugador.", "Hola, me llamo juan!, mi deber es ayudar a los guerreros que caminan por este camino. \n Parece que estas herido, toma este botiquin.\nCura tus heridas, lo necesitaras.", "amistoso"));
   personajes.push_back(new jugador("Enemigo - Darkside", "darkside es un demonio que se encuentra en este camino, es muy fuerte, cuidado con sus ataques.", 50, "enemigo"));
   personajes.push_back(new jugador("Enemigo - Sentinel", "Los ataques de sentinel son algo debiles, pero cuidado... Es muy resistente.", 10,  "enemigo"));
-  personajes.push_back(new jugador("Enemigo - Behemoth", "Behemoth es un demonio muy fuerte, sus ataques son muy poderosos, cuidado con el.", 70, "enemigo"));
-  personajes.push_back(new jugador("Enemigo - Malboro", "Malboro es un demonio que ataca con veneno, cuidado con sus ataques.", 30, "enemigo"));
+  personajes.push_back(new jugador("Enemigo - Behemoth", "Behemoth es un demonio muy fuerte, sus ataques son muy poderosos, cuidado con el.", 30, "enemigo"));
+  personajes.push_back(new jugador("Enemigo - Malboro", "Malboro es un demonio que ataca con veneno, cuidado con sus ataques.", 20, "enemigo"));
   int contrincante=1;
   int seleccion = 0;
   personajes[0]->recibe_interaccion(-90);
@@ -63,12 +63,12 @@ int main()
                       personajes[0]->barravida(personajes[0]->getsalud());
                       cout<<"Barra de vida de tu contrincante:  ";
                       personajes[contrincante]->barravida(personajes[contrincante]->getsalud());
-                      usleep(2000000);
+                      usleep(1000000);
                       system("clear");
                     }
                     cout<<"Los has derrotado!, recuperate con este botiquin y sigue tu camino!"<<endl;
                     contrincante++;
-                    personajes[0]->recibe_interaccion(30);
+                    personajes[0]->recibe_interaccion(60);
                     break;
 
 
@@ -76,6 +76,7 @@ int main()
                     cout<<personajes[contrincante]->getNombre();
                     cout<<"\n";
                     cout<<personajes[contrincante]->getDescripcion();
+                    usleep(3000000);
                     break;
                     
         }}}
