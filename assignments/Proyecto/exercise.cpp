@@ -53,7 +53,10 @@ int main()
               cin>>seleccion;
                 switch(seleccion){
                     case 1:
-                    while(personajes[contrincante]->getsalud()>0 or personajes[0]->getsalud()>0){
+                    while(personajes[contrincante]->getsalud()>0 and personajes[0]->getsalud()>0){
+                      cout<<"Estas peleando contra:";
+                      cout<<personajes[contrincante]->getNombre();
+                      cout<<endl;
                       personajes[contrincante]->actua(*personajes[0]);
                       personajes[0]->actua(*personajes[contrincante]);
                       cout<<"Tu barra de vida:  ";
@@ -63,11 +66,18 @@ int main()
                       usleep(2000000);
                       system("clear");
                     }
-                    personajes[contrincante]->imprime();
+                    cout<<"Los has derrotado!, recuperate con este botiquin y sigue tu camino!"<<endl;
+                    contrincante++;
+                    personajes[0]->recibe_interaccion(30);
+                    break;
+
 
                     case 2:
+                    cout<<personajes[contrincante]->getNombre();
+                    cout<<"\n";
                     cout<<personajes[contrincante]->getDescripcion();
-
+                    break;
+                    
         }}}
       }
    else{
