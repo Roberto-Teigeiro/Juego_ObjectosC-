@@ -20,10 +20,7 @@ std::string personaje::getDescripcion(){
     return descripcion;
 }
 
-void personaje::imprime(){
-    std::cout<<"Soy :"<<nombre<<"!"<<std::endl;
-    std::cout<<descripcion<<std::endl;
-}
+
 std::string personaje::gettipo(){
     return tipo;
 }

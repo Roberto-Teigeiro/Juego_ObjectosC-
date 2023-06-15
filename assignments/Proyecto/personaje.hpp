@@ -6,7 +6,7 @@ public:
 personaje(std::string Nombre, std::string descripcion, std::string Tipo);
 std::string getNombre();
 std::string getDescripcion();
-virtual void imprime();
+virtual void imprime()=0;
 std::string gettipo();
 void setsalud(int Salud);
 int getsalud();
